@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: alameed-postgres
+    environment:
+      POSTGRES_DB: alameed
+      POSTGRES_USER: alameed
+      POSTGRES_PASSWORD: alameed_dev_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - alameed_pgdata:/var/lib/postgresql/data
+
+volumes:
+  alameed_pgdata:
